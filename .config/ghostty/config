@@ -1,0 +1,9 @@
+theme = noctalia
+
+font-family = "Hack Nerd Font"
+font-size = 10
+
+window-padding-x = 3
+window-padding-y = 3
+
+app-notifications = false
