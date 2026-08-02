@@ -7,3 +7,4 @@ window-padding-x = 3
 window-padding-y = 3
 
 app-notifications = false
+progress-style = false
