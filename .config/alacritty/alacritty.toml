@@ -2,7 +2,6 @@
 padding = { x = 3, y = 3 }
 
 [font]
-normal = { family = "Hack Nerd Font", style = "Regular" }
 size = 7
 
 [colors.primary]
