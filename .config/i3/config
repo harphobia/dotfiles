@@ -19,6 +19,7 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id xsetroot -solid "#0e0e0e"
+exec --no-startup-id snixembed --fork 
 exec --no-startup-id flatpak run com.github.wwmm.easyeffects --gapplication-service
 
 # Use pactl to adjust volume in PulseAudio.
@@ -170,7 +171,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-## Screenshots
+# https://gist.github.com/dianjuar/ee774561a8bc02b077989bc17424a19f
+# Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
 bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
 bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
@@ -189,6 +191,8 @@ hide_edge_borders smart
 # finds out, if available)
 bar {
         status_command i3status
+	# tray_output none
+	tray_padding 5
 	colors {
         	background #0E0E0E
 	}
